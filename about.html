@@ -3,31 +3,102 @@
 <html lang="zh-CN"> 
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link rel="stylesheet" href="style.css">
   </head>
 
-  <body>
-    <article id="about">
+  <body> 
+    <header>
+      <nav class="nav-bar">
+        <div class="nav-bar-logo">HaoChen Lu</div>
+        <ul class="nav-bar-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="about">
       <h1>About Me</h1>
-      <h2>Skills</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Skill1</th>
-              <th>Skill2</th>
-              <th>Skill3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="https://www.python.org" target="_blank">Python</a></td>
-              <td><a href="https://www.java.com" target="_blank">Java</a></td>
-              <td><a href="https://www.sql.com" target="_blank">SQL</a></td>
-            </tr>
-          </tbody>
-        </table>
-      <h2>Hobbies</h2>
-        <p>I like to learn new skills.</p>
-    </article>
+      <div class="section-divider"></div>
+    </main>
+    
+    <!-- 个人简介部分 -->
+    <section class="intro-section">
+      <div class="intro-content">
+        <div class="intro-text">
+          <h2>👋 Hello, I'm HaoChen Lu</h2>
+          <p>A passionate developer and student at Hangzhou City University. I love creating innovative solutions and constantly learning new technologies to expand my skillset.</p>
+          <p>My journey in programming started with curiosity and has evolved into a deep passion for problem-solving and building meaningful applications.</p>
+        </div>
+        <div class="intro-stats">
+          <div class="stat-item">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">Programming Languages</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">1</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">1+</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="about-body">
+      <article class="skills-section">
+        <h2>💻 Technical Skills</h2>
+        <div class="section-divider"></div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">🐍</div>
+            <h3><a href="https://www.python.org" target="_blank">Python</a></h3>
+            <p>Data analysis, web development, automation</p>
+            <div class="skill-level">
+              <div class="level-bar" data-level="90"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">☕</div>
+            <h3><a href="https://www.java.com" target="_blank">Java</a></h3>
+            <p>Object-oriented programming, Spring framework</p>
+            <div class="skill-level">
+              <div class="level-bar" data-level="85"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🗄️</div>
+            <h3><a href="https://www.sql.com" target="_blank">SQL</a></h3>
+            <p>Database design, query optimization</p>
+            <div class="skill-level">
+              <div class="level-bar" data-level="80"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <aside class="hobbies-section">
+        <h2>🎯 Interests</h2>
+        <div class="section-divider"></div>
+        <div class="hobbies-grid">
+          <div class="hobby-item">
+            <div class="hobby-icon">🌐</div>
+            <h3>Web Technologies</h3>
+            <p>Staying up-to-date with modern web development trends</p>
+          </div>
+          <div class="hobby-item">
+            <div class="hobby-icon">🤖</div>
+            <h3>AI & Machine Learning</h3>
+            <p>Fascinated by artificial intelligence and its applications</p>
+          </div>
+        </div>
+      </aside>
+    </main>
   </body>
 </html>
