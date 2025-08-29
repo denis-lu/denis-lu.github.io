@@ -3,18 +3,34 @@
 <html lang="zh-CN"> 
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <header>
+      <nav class="nav-bar">
+        <div class="nav-bar-logo">HaoChen Lu</div>
+        <ul class="nav-bar-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <article id="contact">
       <h1>Contact</h1>
+      <hr style="height: 1.5px; background: black; border: none; margin: 0;">
+      <br>
       <h2>Email</h2>
         <ul>
           <li>1874840037@qq.com</li>
           <li>lhc5316@gmail.com</li>
         </ul>
       <h2>Phone</h2>
-        <p>+86 1874840037</p>
+        <p>+86 ...........</p>
       <form action="" method="post">
         <label>Name:<input type="text" name="name"></label><br>
         <label>Gender:<input type="radio" name="gender" value="male">Male<input type="radio" name="gender" value="female">Female</label><br>
@@ -31,7 +47,7 @@
           <option value="Spain">Spain</option>
           <option value="Portugal">Portugal</option>
         </select></label><br>
-        <button type="submit">Submit</button>
+        <button type="submit" class="submit-btn">Submit</button>
       </form>
       <br>
       <iframe src="https://map.baidu.com/@13373790.989112498,3514195.4896343593,15.15z" width="500" height="300"></iframe>
