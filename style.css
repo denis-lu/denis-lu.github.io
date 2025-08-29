@@ -1,0 +1,607 @@
+/* 移动端默认样式 (0px - 767px) - 移动端优先策略 */
+/* 使用 * 通用选择器，设置 box-sizing: border-box; 和 margin: 0; padding: 0; 来统一盒模型行为 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 为 body 元素设置一个优雅的全局字体（如 font-family: 'Helvetica', 'Arial', sans-serif;）、默认文字颜色和背景色 */
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: #333;
+  background-color: #f0f0f0;
+  
+  /* 布局应为单栏，所有内容垂直堆叠 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* 确保body至少占满整个视口高度 */
+  
+  /* 字体大小应适合在小屏幕上阅读 */
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 0 10px; /* 在小屏幕上添加边距 */
+  width: 100%;
+}
+
+/* 移动端：about页面默认为单列布局 */
+.about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 移动端导航栏：垂直排列，居中对齐 */
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.nav-bar-logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 导航栏的链接在移动端垂直排列 */
+.nav-bar-list {
+  list-style: none;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* 移动端标题系统：适合小屏幕阅读 */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+/* 美化链接 (a)：移除下划线，设置默认颜色，并添加一个 :hover 伪类，当鼠标悬停时改变颜色或添加下划线，提供交互反馈。 */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+/* 移动端：为页面的主要容器添加合适的间距 */
+footer {
+  margin: 15px 0;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+header {
+  margin: 0;
+  width: 100%;
+} 
+
+/* 移动端：main区域自动扩展填充剩余空间 */
+main {
+  flex-grow: 1;
+  margin: 15px 0;
+  padding: 0 15px;
+  line-height: 1.8;
+  width: 100%;
+  max-width: 100%;
+} 
+
+#about {
+  margin: 15px 0;
+  padding: 0 15px;
+  line-height: 1.8;
+  flex-grow: initial;
+  width: 100%;
+}
+
+/* 移动端：图片自适应容器宽度 */
+img {
+  max-width: 100%;
+  display: block;
+  margin: 10px auto; /* 居中显示 */
+  border-radius: 8px; /* 添加圆角 */
+}
+
+/* 移动端：iframe自适应 */
+iframe {
+  max-width: 100%;
+  width: 100%;
+  height: 200px; /* 在移动端使用较小的高度 */
+}
+
+/* 移动端：提交按钮样式 */
+.submit-btn {
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 20px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%; /* 移动端按钮占满宽度 */
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 移动端：portfolio列表垂直排列 */
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-item { 
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 移动端：表单样式优化 */
+form {
+  width: 100%;
+}
+
+form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+form input, 
+form textarea, 
+form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+form input[type="radio"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+/* ===========================================
+   About页面专用样式
+   ========================================== */
+
+/* 通用分割线样式 */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, #333 0%, #999 50%, #333 100%);
+  border: none;
+  margin: 15px 0 25px 0;
+  border-radius: 1px;
+}
+
+/* 个人简介部分 */
+.intro-section {
+  width: 100%;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 30px 15px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.intro-content {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.intro-text h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.intro-text p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  font-size: 1em;
+}
+
+/* 统计数据网格 */
+.intro-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.stat-item {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9em;
+  color: #666;
+  font-weight: 500;
+}
+
+/* 技能卡片网格 */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.skill-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid #3498db;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.skill-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.skill-card h3 a {
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+.skill-card h3 a:hover {
+  color: #3498db;
+}
+
+.skill-card p {
+  color: #666;
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* 技能等级条 */
+.skill-level {
+  background: #e9ecef;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.level-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db 0%, #2ecc71 100%);
+  border-radius: 4px;
+  transition: width 2s ease-in-out;
+}
+
+.level-bar[data-level="90"] { width: 90%; }
+.level-bar[data-level="85"] { width: 85%; }
+.level-bar[data-level="80"] { width: 80%; }
+
+/* 兴趣爱好网格 */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.hobby-item {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 3px solid #e74c3c;
+  text-align: center;
+}
+
+.hobby-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hobby-icon {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hobby-item h3 {
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+.hobby-item p {
+  color: #666;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+
+/* ===========================================
+   平板端适配 (768px 及以上)
+   ========================================== */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  
+  /* 平板端：导航栏开始水平排列 */
+  .nav-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .nav-bar-list {
+    flex-direction: row;
+    gap: 25px;
+  }
+  
+  /* 平板端：about页面启用两列布局 */
+  .about-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+  }
+  
+  /* 平板端：标题大小适当增大 */
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 1.8em;
+  }
+  
+  h3 {
+    font-size: 1.4em;
+  }
+  
+  /* 平板端：portfolio网格布局 */
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .portfolio-item {
+    flex-basis: calc(50% - 10px);
+  }
+  
+  /* 平板端：iframe尺寸调整 */
+  iframe {
+    height: 250px;
+  }
+  
+  /* 平板端：按钮不再占满宽度 */
+  .submit-btn {
+    width: auto;
+    min-width: 150px;
+  }
+  
+  /* 平板端：About页面优化 */
+  .intro-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .intro-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .hobbies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .skill-card, .hobby-item {
+    padding: 30px;
+  }
+  
+  .intro-section {
+    padding: 40px 30px;
+  }
+}
+
+/* ===========================================
+   桌面端优化 (1024px 及以上)
+   ========================================== */
+@media (min-width: 1024px) {
+  body {
+    max-width: 1200px; /* 限制最大宽度避免内容过度拉伸 */
+    margin: 0 auto; /* 水平居中 */
+    font-size: 18px;
+    padding: 0 40px;
+  }
+  
+  /* 桌面端：导航栏优化 */
+  .nav-bar {
+    padding: 25px 0;
+  }
+  
+  .nav-bar-list {
+    gap: 35px;
+  }
+  
+  /* 桌面端：进一步调整Grid布局间距 */
+  .about-body {
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* 桌面端：标题进一步优化 */
+  h1 {
+    font-size: 3em;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  h3 {
+    font-size: 1.5em;
+  }
+  
+  /* 桌面端：主要内容区域限制宽度 */
+  main {
+    max-width: 1000px;
+    margin: 20px auto;
+  }
+  
+  #about {
+    max-width: 1000px;
+    margin: 20px auto;
+  }
+  
+  /* 桌面端：portfolio项目可能三列布局 */
+  .portfolio-item {
+    flex-basis: calc(33.333% - 10px);
+  }
+  
+  /* 桌面端：iframe最大尺寸 */
+  iframe {
+    height: 300px;
+  }
+  
+  /* 桌面端：About页面终极优化 */
+  .intro-content {
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .intro-stats {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .stat-item {
+    padding: 25px;
+  }
+  
+  .stat-number {
+    font-size: 3em;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hobbies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .skill-card {
+    padding: 35px;
+  }
+  
+  .hobby-item {
+    padding: 30px;
+  }
+  
+  .intro-section {
+    padding: 50px 40px;
+    margin: 30px 0;
+  }
+  
+  .skills-section, .hobbies-section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
