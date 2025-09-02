@@ -1,0 +1,55 @@
+# 我的足迹地图数据配置
+travel_map:
+  description: "探索我走过的城市，每个标记都有一段特别的回忆..."
+  center_coords: [35.0, 103.0]  # 地图中心坐标 [纬度, 经度]
+  default_zoom: 5
+  
+  cities:
+    - name: "北京"
+      coords: [39.9042, 116.4074]
+      type: "special"  # special, visited, planned
+      story: "在首都度过了难忘的求学时光，这里有众多的历史文化遗迹和现代科技的碰撞。"
+      date: "2023年 - 至今"
+      image: null  # 可以添加图片URL
+      
+    - name: "上海"
+      coords: [31.2304, 121.4737]
+      type: "visited"
+      story: "国际化大都市，感受到了前沿科技和商业的活力，外滩的夜景令人难忘。"
+      date: "2024年春节"
+      image: null
+      
+    - name: "杭州"
+      coords: [30.2741, 120.1551]
+      type: "visited"
+      story: "人间天堂，西湖的美景让人流连忘返，也是互联网巨头的聚集地。"
+      date: "2024年夏天"
+      image: null
+      
+    - name: "南京"
+      coords: [32.0603, 118.7969]
+      type: "visited"
+      story: "六朝古都，历史底蕴深厚，在这里感受到了深厚的文化氛围。"
+      date: "2024年秋天"
+      image: null
+      
+    - name: "西安"
+      coords: [34.3416, 108.9398]
+      type: "visited"
+      story: "千年古都，兵马俑的震撼和古城墙的雄伟让人印象深刻。"
+      date: "2024年国庆"
+      image: null
+      
+    - name: "深圳"
+      coords: [22.5431, 114.0579]
+      type: "planned"
+      story: "改革开放的前沿城市，计划去感受这座年轻城市的科技创新氛围。"
+      date: "计划2025年"
+      image: null
+      
+    - name: "成都"
+      coords: [30.5728, 104.0668]
+      type: "planned"
+      story: "天府之国，向往那里的美食文化和休闲生活方式。"
+      date: "计划2025年"
+      image: null

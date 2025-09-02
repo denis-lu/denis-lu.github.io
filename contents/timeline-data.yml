@@ -1,0 +1,40 @@
+# 人生时间轴数据配置
+timeline:
+  title: "我的人生轨迹"
+  events:
+    - year: "2023"
+      title: "进入大学"
+      side: "left"
+      description: "开始了我的计算机科学与技术（拔尖创新班）专业学习，踏上编程之路。"
+      details: "进入浙大城市学院，主修计算机科学与技术（拔尖创新班）专业。在这里开始接触到编程世界，从C语言开始，逐步学习数据结构与算法、面向对象编程等核心课程。"
+      
+    - year: "2024"
+      title: "后端开发学习"
+      side: "left"
+      description: "学习JavaSE，JavaWeb。掌握数据库设计和操作。"
+      details: "深入学习Java语言，掌握了面向对象编程的精髓。学习了MySQL数据库设计和操作，能够进行复杂的查询优化。开发了学生信息管理系统等项目，熟悉了前后端分离的开发模式。"
+
+    - year: "2025"
+      title: "前端技术学习"
+      side: "right"
+      description: "深入学习HTML、CSS、JavaScript，开始构建第一个个人网站。"
+      details: "我开始深入前端技术栈，学习HTML5、CSS3的新特性，掌握了JavaScript ES6+语法。"
+
+    # - year: "2025"
+    #   title: "全栈项目实践"
+    #   side: "right"
+    #   description: "完成了多个全栈项目，包括个人博客系统和在线学习平台。"
+    #   details: "整合前后端技术，独立完成了个人博客系统的开发，包括用户认证、文章管理、评论系统等功能。还参与开发了在线学习平台，负责课程管理模块的设计与实现。这些项目让我对软件开发的整个流程有了更深的理解。"
+      
+    # - year: "2025"
+    #   title: "技能拓展期"
+    #   side: "left"
+    #   description: "学习云计算、DevOps，开始关注系统架构设计。"
+    #   details: "开始学习云计算平台的使用，如阿里云、腾讯云等。掌握了Docker容器化技术和基本的CI/CD流程。学习了Redis缓存技术和消息队列的使用。开始关注高并发、高可用的系统设计，为将来的职业发展打下基础。"
+      
+    - year: "Future"
+      title: "未来展望"
+      side: "right"
+      type: "future"
+      description: "目标成为一名优秀的后端工程师。"
+      details: "未来我希望能够继续深入技术栈的学习，关注人工智能、大数据等前沿技术。"
