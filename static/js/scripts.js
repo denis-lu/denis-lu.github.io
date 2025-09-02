@@ -366,7 +366,7 @@ class GitHubProjectsManager {
 
 // Initialize GitHub Projects functionality
 async function initializeGitHubProjects() {
-    const githubToken = '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';
+    const githubToken = null;
     
     const githubManager = new GitHubProjectsManager('denis-lu', githubToken);
     await githubManager.initialize();
